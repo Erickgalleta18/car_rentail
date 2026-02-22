@@ -16,5 +16,9 @@ class BrandsSeeder extends Seeder
             'img' => 'audi.png',
             'created_at'=>date("Y-m-d h:m:s")
         ]);
+        $dato = new Brand();
+        $dato->name = "Mercedes";
+        $dato->img = "mercedes.png";
+        $dato->save();
     }
 }

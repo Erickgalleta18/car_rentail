@@ -18,5 +18,11 @@ class Loyalty_levelsSeeder extends Seeder
             'free_extra_hours' => 24,
             'created_at'=>date("Y-m-d h:m:s")
         ]);
+        $dato = new Loyalty_level();
+        $dato->name = "Silver";
+        $dato->min_points = 500;
+        $dato->discount_percentage = 10;
+        $dato->free_extra_hours = 18;
+        $dato->save();
     }
 }

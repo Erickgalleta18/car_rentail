@@ -20,5 +20,10 @@ class DriversSeeder extends Seeder
             'licence_img' => 'user1id.png',
             'created_at'=>date("Y-m-d h:m:s")
         ]);
+        $dato = new Driver();
+        $dato->user_id = 2;
+        $dato->licence_number = 241634;
+        $dato->licence_img = "user2id";
+        $dato->save();
     }
 }

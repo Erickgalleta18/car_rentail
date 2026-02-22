@@ -20,5 +20,13 @@ class PaymentsSeeder extends Seeder
             'payment_date' =>date("Y-m-d h:m:s"),
             'created_at'=>date("Y-m-d h:m:s")
         ]);
+        $dato = new Payment();
+        $dato->rental_id = 2;
+        $dato->amount = 19000;
+        $dato->payment_method = 'debit card';
+        $dato->transaction_id = 'DC4961469658';
+        $dato->status = 'pending';
+        $dato->payment_date = date("Y-m-d h:m:s");
+        $dato->save();
     }
 }

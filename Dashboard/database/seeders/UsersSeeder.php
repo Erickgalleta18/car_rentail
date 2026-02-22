@@ -24,7 +24,11 @@ class UsersSeeder extends Seeder
             'created_at'=>date("Y-m-d h:m:s")
         ]);
         $dato = new User();
-        $dato->name="2";
+        $dato->name = "Carlos Gaytan";
+        $dato->email = "cgaytan@gmail.com";
+        $dato->password = Hash::make("carlos");
+        $dato->loyalty_points = 600;
+        $dato->loyalty_level_id = 2;
         $dato->save();
     }
 }

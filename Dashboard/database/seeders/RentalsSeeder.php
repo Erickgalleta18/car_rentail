@@ -24,5 +24,14 @@ class RentalsSeeder extends Seeder
             'status' => 'confirmed',
             'created_at'=>date("Y-m-d h:m:s")
         ]);
+        $dato = new Rental();
+        $dato->user_id = 2;
+        $dato->car_id = 2;
+        $dato->driver_id = 2;
+        $dato->pickup_date = date("Y-m-d h:m:s");
+        $dato->return_date = date("Y-m-d h:m:s");
+        $dato->total_amount = 19000;
+        $dato->status = "pending";
+        $dato->save();
     }
 }

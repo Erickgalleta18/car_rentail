@@ -26,5 +26,19 @@ class CarsSeeder extends Seeder
             'status'=>'available',
             'created_at'=>date("Y-m-d h:m:s")
         ]);
+        $dato = new Car();
+        $dato->brand_id = 2;
+        $dato->model = "AMG";
+        $dato->year = 2022;
+        $dato->color = "white";
+        $dato->license_plate = 'HWS-6136';
+        $dato->mileage = 1632;
+        $dato->lat = 54.01452;
+        $dato->lng = 32.12494;
+        $dato->is_premium = 1;
+        $dato->rental_count = 2;
+        $dato->daily_rate = 8;
+        $dato->status = 'available';
+        $dato->save();
     }
 }
