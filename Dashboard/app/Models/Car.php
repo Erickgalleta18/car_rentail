@@ -22,4 +22,10 @@ class Car extends Model
         'daily_rate',
         'status'
     ];
+
+    public function brand(){
+        return $this->belongsTo(Brand::class);
+    }
+    
+
 }

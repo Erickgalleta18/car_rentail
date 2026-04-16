@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('brand_id')->references('id')->on('brands');
+            $table->foreignId('brand_id')->references('id')->on('brands')->onDelete('cascade');;
             $table->string('model',100);           
             $table->integer('year');
             $table->string('color',100);

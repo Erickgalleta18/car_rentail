@@ -16,4 +16,7 @@ class Payment extends Model
         'status',
         'payment_date'
     ];
+    public function rental(){
+        return $this->belongsTo(Rental::class);
+    }
 }

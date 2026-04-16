@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('drivers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');;
             $table->integer('licence_number')->unique();
             $table->string('licence_img',255);
             $table->rememberToken();

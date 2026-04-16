@@ -11,7 +11,7 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('rental_id')->references('id')->on('rentals');
+            $table->foreignId('rental_id')->references('id')->on('rentals')->onDelete('cascade');;
             $table->integer('amount');
             $table->string('payment_method',100);
             $table->string('transaction_id',255)->unique();

@@ -32,3 +32,4 @@ class UsersSeeder extends Seeder
         $dato->save();
     }
 }
+
