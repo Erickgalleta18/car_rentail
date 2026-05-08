@@ -1,24 +1,18 @@
-import Card from './components/Card'
-import { use, useState } from "react"
+import { Route, BrowserRouter, Routes } from 'react-router-dom'
+import Dashboard from './views/Dashboard'
+import Contact from './views/Contact'
+
 
 function App() {
-  const [elementos, setElementos] = useState([]) as any
-  const [nombre, setNombre]= useState("")
-
-  const agregar=()=>{
-     setElementos([...elementos,nombre])
-  }
-
+  
   return (
     <>
-      <h1>{nombre}</h1>
-      <input type="text" value={nombre} onChange={ (e)=>{ setNombre(e.target.value)} } />
-      <button onClick={agregar}>Agregar</button>
-      {
-        elementos.map(()=>{
-            return <Card/>
-        })
-      }
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

@@ -1,21 +1,17 @@
-import { use, useState } from "react"
+import { useState } from 'react'
 
-export default function Card(){
-
-    var cont:number=0
-    const [contador, setContador] = useState(0) 
-
-    const aumentar = ()=>{
-            console.log("Neiga",cont)
-            cont++
-            setContador(contador+1) 
-   }
-
-
-    return (
-        <>
-            <h1>Card {contador}</h1>
-            <button onClick={aumentar}>Hola</button>
-        </>
-    ) 
+export default function Card() {
+    //var count: number = 10
+    const [counter, setCounter] = useState(10)
+    const increment = () => {
+        
+        console.log('increment', counter)
+        setCounter(counter + 1)
+    }
+  return (
+    <>
+        <h1>Card {counter}</h1>
+        <button onClick={increment}>Click me bitch</button>
+    </>
+  );
 }
