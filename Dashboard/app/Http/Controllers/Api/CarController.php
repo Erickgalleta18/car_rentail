@@ -15,7 +15,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        $cars = Car::all();
+        $cars = Car::with('brand')->get();
         return response()->json([
             'sucess' => true,
             'data' => $cars
@@ -62,7 +62,7 @@ class CarController extends Controller
      */
     public function show(string $id)
     {
-        $car = Car::find($id);
+        $car = Car::with('brand')->find($id);
         if (!$car) {
             return response()->json([
                 'success' => false,

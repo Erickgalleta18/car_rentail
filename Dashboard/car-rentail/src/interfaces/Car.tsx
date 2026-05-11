@@ -1,7 +1,10 @@
 
 export default interface Car {
   brand_id:string,
+  brand:{name:string},
   color:string,
+  img:string,
+  price:number,
   created_at:string,
   id:number,
   is_premium:boolean,

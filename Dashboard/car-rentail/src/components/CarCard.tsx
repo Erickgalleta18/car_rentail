@@ -36,6 +36,7 @@ interface CarCardProps {
 }
 
 export default function CarCard({ car, favorited, onToggleFav }: CarCardProps) {
+  var API_ASSETS = import.meta.env.VITE_API_ASSETS
   return (
     <div className="car-card">
       <div className="card-top-row">
@@ -53,15 +54,15 @@ export default function CarCard({ car, favorited, onToggleFav }: CarCardProps) {
         </button>
       </div>
 
-      <img src="" alt={car.model} className="car-img" />
+      <img src={`${API_ASSETS}/cars/${car.img}`} alt={car.model} className="car-img" />
 
       <div className="card-bottom">
         <div>
-          <div className="car-name">{car.model} {car.brand_id}</div>
+          <div className="car-name">{car.brand.name} {car.model}</div>
           <div className="car-spec">{car.year}</div>
         </div>
         <div className="car-price">
-          <span className="price-val">$a</span>
+          <span className="price-val">${car.price}</span>
           <span className="price-unit"> / hour</span>
         </div>
       </div>

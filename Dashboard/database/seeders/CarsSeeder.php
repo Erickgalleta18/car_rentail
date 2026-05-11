@@ -16,6 +16,8 @@ class CarsSeeder extends Seeder
             'model' => 'R8',
             'year' => 2016,
             'color' => 'black',
+            'img' => 'audi.png',
+            'price' => 24.25,
             'license_plate' => 'CDN-0324',
             'mileage' => 1024,
             'lat' => 5.09219,
@@ -31,6 +33,8 @@ class CarsSeeder extends Seeder
         $dato->model = "AMG";
         $dato->year = 2022;
         $dato->color = "white";
+        $dato->img = "amg.png";
+        $dato->price = 30.23;
         $dato->license_plate = 'HWS-6136';
         $dato->mileage = 1632;
         $dato->lat = 54.01452;
